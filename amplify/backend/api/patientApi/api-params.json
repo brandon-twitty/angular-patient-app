@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/patient",
+            "lambdaFunction": "angPatientApp",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "patientApi",
+    "apiName": "patientApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "angPatientApp"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-ang-patient-app-dev-103034-authRole",
+        "unAuthRoleName": "amplify-ang-patient-app-dev-103034-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "angPatientApp",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
