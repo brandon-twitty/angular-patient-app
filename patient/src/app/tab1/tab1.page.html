@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Contact Information
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <img src="../../assets/img/medicalmj.jpg" />
+      <ion-card-subtitle>Get Legal Now</ion-card-subtitle>
+      <ion-card-title>Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="patientForm" (ngSubmit)="createPatient()">
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input id="firstName" formControlName="firstName" placeholder="First Name" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input id="lastName" formControlName="lastName" placeholder="Last Name" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input id="email" formControlName="email" placeholder="Email" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Phone Number</ion-label>
+        <ion-input id="phoneNumber" formControlName="phoneNumber" placeholder="Phone Number" type="number"></ion-input>
+      </ion-item>
+       <!-- <ion-item>
+          <ion-label>Select Appointment Date</ion-label>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+        </ion-item>-->
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <!--<app-explore-container name="Tab qanon page"></app-explore-container>-->
+</ion-content>
